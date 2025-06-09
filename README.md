@@ -7,7 +7,7 @@ An AI-powered desktop application for generating detailed to-do lists and study 
 ![App Screenshot](placeholder.png) 
 (Replace placeholder.png with an actual screenshot of the application)
 -->
-![alt text](image.png)![alt text](image-1.png)
+![alt text](./public/images/image.png)![alt text](./public/images/image-1.png)
 ## Features
 
 *   **Flexible AI-Powered Generation:**
