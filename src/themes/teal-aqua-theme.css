@@ -1,0 +1,33 @@
+/* themes/teal-aqua-theme.css */
+body.theme-teal-aqua {
+    --primary-accent-light: #20C997; /* Bootstrap teal */
+    --button-bg-light: #20C997;
+    --button-hover-bg-light: #1BAA80; /* Darker teal */
+    --sidebar-active-text-light: #20C997;
+    --loader-color-light: #20C997;
+    --link-color-light: #20C997;
+
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+}
+
+body.theme-teal-aqua.dark-mode {
+    --primary-accent-dark: #5EEAD4; /* Lighter aqua/teal */
+    --button-bg-dark: #5EEAD4;
+    --button-text-dark: #000000; /* Black text for light teal button */
+    --button-hover-bg-dark: #8CF0E1; /* Even lighter teal for hover */
+    --sidebar-active-text-dark: #5EEAD4;
+    --loader-color-dark: #5EEAD4;
+    --link-color-dark: #5EEAD4;
+
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+}

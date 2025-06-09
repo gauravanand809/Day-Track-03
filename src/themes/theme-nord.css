@@ -1,0 +1,66 @@
+/* themes/theme-nord.css - Regenerated for distinctness */
+body.theme-nord {
+    /* Nord Light Values (Interpretation based on Nord palette) */
+    --primary-accent-light: #5E81AC; /* nord10 - Blue */
+    --button-bg-light: #5E81AC; /* nord10 - Blue */
+    --button-hover-bg-light: #81A1C1; /* nord9 - Lighter Blue */
+    --sidebar-active-text-light: #BF616A; /* nord11 - Red */
+    --loader-color-light: #5E81AC; /* nord10 - Blue */
+    --link-color-light: #88C0D0; /* nord8 - Cyan Frost */
+
+    /* General variables - default to light mode values */
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+
+    /* Overriding base colors for Nord Light */
+    --bg-color: #ECEFF4; /* nord6 - Lightest Snow Storm */
+    --text-color: #2E3440; /* nord0 - Darkest Polar Night */
+    --text-color-secondary: #4C566A; /* nord3 - Dark Gray */
+    --sidebar-bg: #E5E9F0; /* nord5 - Lighter Snow Storm */
+    --sidebar-text: #3B4252; /* nord1 - Darker Polar Night */
+    --sidebar-active-bg: #D8DEE9; /* nord4 - Light Gray Snow Storm */
+    --sidebar-hover-bg: #D8DEE9; /* nord4 */
+    --border-color: #D8DEE9; /* nord4 */
+    --input-bg-color: #ECEFF4; /* nord6 */
+    --input-border-color: #D8DEE9; /* nord4 */
+    --input-text-color: #2E3440; /* nord0 */
+    --card-bg-color: #E5E9F0; /* nord5 */
+    --button-text-color: #ECEFF4; /* nord6 - For text on blue buttons */
+}
+
+body.theme-nord.dark-mode {
+    /* Nord Dark Values (Official Nord Palette) */
+    --primary-accent-dark: #88C0D0; /* nord8 - Cyan Frost */
+    --button-bg-dark: #5E81AC; /* nord10 - Blue */
+    --button-hover-bg-dark: #81A1C1; /* nord9 - Lighter Blue */
+    --sidebar-active-text-dark: #EBCB8B; /* nord13 - Yellow Frost */
+    --loader-color-dark: #88C0D0; /* nord8 - Cyan Frost */
+    --link-color-dark: #8FBCBB; /* nord7 - Teal Frost */
+
+    /* Override general variables for dark mode */
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+
+    /* Overriding base colors for Nord Dark */
+    --bg-color: #2E3440; /* nord0 - Background */
+    --text-color: #D8DEE9; /* nord4 - Text */
+    --text-color-secondary: #A3BE8C; /* nord14 - Green Frost (for secondary text) */
+    --sidebar-bg: #3B4252; /* nord1 - Lighter Background */
+    --sidebar-text: #ECEFF4; /* nord6 - Lightest Text */
+    --sidebar-active-bg: #434C5E; /* nord2 - UI Elements */
+    --sidebar-hover-bg: #434C5E; /* nord2 */
+    --border-color: #4C566A; /* nord3 - Subtle UI */
+    --input-bg-color: #3B4252; /* nord1 */
+    --input-border-color: #4C566A; /* nord3 */
+    --input-text-color: #ECEFF4; /* nord6 */
+    --card-bg-color: #3B4252; /* nord1 */
+    --button-text-color: #ECEFF4; /* nord6 - For text on blue buttons */
+}

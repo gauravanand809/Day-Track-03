@@ -1,0 +1,30 @@
+<!-- Parallel You View - Pods Structure -->
+<div id="parallel-you-view" class="view">
+    <header class="view-header">
+        <h1>Parallel You - Dream Pods</h1>
+        <p>Create pods for your dreams and chat with your future self from 2029.</p>
+        <button id="add-new-dream-pod-btn" class="btn-primary" style="margin-top: 10px;">Start a New Dream Conversation</button>
+    </header>
+
+    <div id="parallel-you-loader" class="loader" style="display:none;"></div> 
+    <!-- Loader specific to this view, if needed for pod creation -->
+
+    <div id="dream-pods-container" class="parallel-you-pods-container" style="margin-top: 20px;">
+        <!-- Dream pods will be rendered here by JavaScript -->
+    </div>
+
+    <!-- Modal for Creating a New Dream Pod (Initially Hidden) -->
+    <div id="new-dream-pod-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal-btn" id="close-new-dream-modal-btn">&times;</span>
+            <h3>What's Your New Dream/Goal for 2029?</h3>
+            <div class="setting-item"> <!-- Re-using .setting-item for consistent modal form styling -->
+                <label for="new-dream-goal-input">Define your goal:</label>
+                <input type="text" id="new-dream-goal-input" placeholder="e.g., Become a lead developer in Berlin...">
+            </div>
+            <div class="modal-actions">
+                <button id="create-dream-pod-btn" class="btn-primary">Create Dream Pod & Hear from Future Self</button>
+            </div>
+        </div>
+    </div>
+</div>

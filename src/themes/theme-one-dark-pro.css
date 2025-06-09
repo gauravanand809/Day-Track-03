@@ -1,0 +1,67 @@
+/* themes/theme-one-dark-pro.css */
+body.theme-one-dark-pro {
+    /* One Dark Pro is primarily a dark theme. Light mode is an interpretation. */
+    /* Light Values (Interpretation) */
+    --primary-accent-light: #61AFEF; /* Blue */
+    --button-bg-light: #61AFEF; /* Blue */
+    --button-hover-bg-light: #7BC6F8; /* Lighter Blue */
+    --sidebar-active-text-light: #C678DD; /* Purple */
+    --loader-color-light: #61AFEF; /* Blue */
+    --link-color-light: #98C379; /* Green */
+
+    /* General variables - default to light mode values */
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+
+    /* Overriding base colors for One Dark Light (Interpretation) */
+    --bg-color: #FAFAFA; /* Very Light Gray */
+    --text-color: #383A42; /* Dark Gray */
+    --text-color-secondary: #A0A1A7; /* Medium Gray */
+    --sidebar-bg: #F0F0F0; /* Light Gray */
+    --sidebar-text: #383A42;
+    --sidebar-active-bg: #E0E0E0; /* Slightly darker gray */
+    --sidebar-hover-bg: #E0E0E0;
+    --border-color: #D1D1D1; /* Light border */
+    --input-bg-color: #FFFFFF; /* White */
+    --input-border-color: #D1D1D1;
+    --input-text-color: #383A42;
+    --card-bg-color: #F0F0F0;
+    --button-text-color: #FFFFFF; /* White text for blue buttons */
+}
+
+body.theme-one-dark-pro.dark-mode {
+    /* One Dark Pro Dark Values */
+    --primary-accent-dark: #61AFEF; /* Blue */
+    --button-bg-dark: #61AFEF; /* Blue */
+    --button-hover-bg-dark: #7BC6F8; /* Lighter Blue */
+    --sidebar-active-text-dark: #C678DD; /* Purple */
+    --loader-color-dark: #61AFEF; /* Blue */
+    --link-color-dark: #98C379; /* Green */
+
+    /* Override general variables for dark mode */
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+
+    /* Overriding base colors for One Dark Pro Dark */
+    --bg-color: #282C34; /* Background */
+    --text-color: #ABB2BF; /* Foreground */
+    --text-color-secondary: #5C6370; /* Gutter/Comment */
+    --sidebar-bg: #21252B; /* Slightly Darker Background */
+    --sidebar-text: #ABB2BF;
+    --sidebar-active-bg: #2C313A; /* Active Tab Background */
+    --sidebar-hover-bg: #2C313A;
+    --border-color: #2C313A;
+    --input-bg-color: #21252B;
+    --input-border-color: #5C6370;
+    --input-text-color: #ABB2BF;
+    --card-bg-color: #21252B;
+    --button-text-color: #282C34; /* Dark text for light blue buttons */
+}

@@ -1,0 +1,66 @@
+/* themes/theme-gruvbox.css */
+body.theme-gruvbox {
+    /* Gruvbox Light Values */
+    --primary-accent-light: #458588; /* Blue */
+    --button-bg-light: #458588; /* Blue */
+    --button-hover-bg-light: #076678; /* Darker Blue */
+    --sidebar-active-text-light: #CC241D; /* Red */
+    --loader-color-light: #458588; /* Blue */
+    --link-color-light: #689D6A; /* Green */
+
+    /* General variables - default to light mode values */
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+
+    /* Overriding base colors for Gruvbox Light */
+    --bg-color: #fbf1c7; /* Light Background */
+    --text-color: #3c3836; /* Dark Foreground */
+    --text-color-secondary: #504945; /* Darker Foreground */
+    --sidebar-bg: #f9f5d7; /* Lighter Background */
+    --sidebar-text: #3c3836;
+    --sidebar-active-bg: #ebdbb2; /* Light Grayish Yellow */
+    --sidebar-hover-bg: #ebdbb2;
+    --border-color: #d5c4a1; /* Grayish Yellow */
+    --input-bg-color: #f9f5d7;
+    --input-border-color: #d5c4a1;
+    --input-text-color: #3c3836;
+    --card-bg-color: #f9f5d7;
+    --button-text-color: #fbf1c7; /* Light text for buttons */
+}
+
+body.theme-gruvbox.dark-mode {
+    /* Gruvbox Dark Values */
+    --primary-accent-dark: #83a598; /* Aqua */
+    --button-bg-dark: #83a598; /* Aqua */
+    --button-hover-bg-dark: #458588; /* Blue (used as darker aqua) */
+    --sidebar-active-text-dark: #fe8019; /* Orange */
+    --loader-color-dark: #83a598; /* Aqua */
+    --link-color-dark: #b8bb26; /* Green */
+
+    /* Override general variables for dark mode */
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+
+    /* Overriding base colors for Gruvbox Dark */
+    --bg-color: #282828; /* Dark Background */
+    --text-color: #ebdbb2; /* Light Foreground */
+    --text-color-secondary: #a89984; /* Grayish Foreground */
+    --sidebar-bg: #32302f; /* Darker Background */
+    --sidebar-text: #ebdbb2;
+    --sidebar-active-bg: #504945; /* Dark Gray */
+    --sidebar-hover-bg: #504945;
+    --border-color: #504945;
+    --input-bg-color: #32302f;
+    --input-border-color: #504945;
+    --input-text-color: #ebdbb2;
+    --card-bg-color: #32302f;
+    --button-text-color: #282828; /* Dark text for buttons */
+}

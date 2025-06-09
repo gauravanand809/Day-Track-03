@@ -1,0 +1,138 @@
+/* General Controls (select, buttons, inputs container) */
+.controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    align-items: center;
+    flex-wrap: wrap; /* Allow controls to wrap on smaller screens */
+}
+
+/* General form elements styling: input, select, textarea */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%; /* Make form elements take full width by default */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid var(--input-border-color);
+    font-size: 0.95em;
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-family: inherit; /* Ensure form elements inherit app's font */
+    line-height: 1.4; /* Improved readability for inputs */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary-accent-color); /* Defined by theme */
+    /* Using a more modern approach for focus ring, ensure RGBA variables are defined in themes or variables.css */
+    box-shadow: 0 0 0 3px var(--primary-accent-focus-shadow-color, rgba(var(--primary-accent-rgb, 0, 123, 255), 0.25)); 
+}
+/* Dark mode focus might need a different alpha or color if not handled by theme's primary-accent-rgb */
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="password"]:focus,
+body.dark-mode input[type="date"]:focus,
+body.dark-mode input[type="email"]:focus,
+body.dark-mode input[type="number"]:focus,
+body.dark-mode select:focus,
+body.dark-mode textarea:focus {
+    box-shadow: 0 0 0 3px var(--primary-accent-focus-shadow-color-dark, rgba(var(--primary-accent-rgb, 80, 170, 255), 0.35));
+}
+
+/* Ensure date inputs show their native picker */
+input[type="date"] {
+    -webkit-appearance: auto; /* Safari/Chrome */
+    -moz-appearance: auto; /* Firefox */
+    appearance: auto; /* Standard */
+    /* Consider a specific width if 100% is problematic in flex containers */
+}
+
+/* For date inputs within the AI Plan generator section specifically */
+#ai-plan-controls input[type="date"] {
+    flex-grow: 1; /* Allow to grow but also have a basis */
+    flex-basis: 150px; /* Give a reasonable base size */
+    min-width: 120px; /* Prevent from becoming too small */
+    width: auto; /* Override the general 100% width for these specific inputs */
+}
+
+
+.controls select { /* Specific to selects within a .controls flex container */
+    flex-grow: 1; 
+    min-width: 180px;
+}
+
+/* General button styling */
+button, 
+.button { /* .button class for non-button elements styled as buttons (e.g., <a>) */
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid var(--button-bg-color, var(--primary-accent-color)); 
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--button-bg-color, var(--primary-accent-color));
+    color: var(--button-text-color); /* Should contrast with button-bg-color */
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+button:hover, 
+.button:hover {
+    background-color: var(--button-hover-bg-color, var(--primary-accent-hover-color)); 
+    border-color: var(--button-hover-bg-color, var(--primary-accent-hover-color));
+    transform: translateY(-1px); 
+}
+
+button:disabled, 
+.button:disabled {
+    background-color: #ccc; /* Non-theme color for disabled state */
+    border-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    transform: none;
+}
+body.dark-mode button:disabled,
+body.dark-mode .button:disabled {
+    background-color: #555;
+    border-color: #555;
+    color: #888;
+}
+
+/* Destructive action button class */
+.btn-danger {
+    background-color: var(--button-danger-bg-color);
+    border-color: var(--button-danger-border-color);
+    color: var(--button-danger-text-color) !important; /* Ensure text color overrides */
+}
+.btn-danger:hover {
+    background-color: var(--button-danger-hover-bg-color);
+    border-color: var(--button-danger-hover-border-color);
+}
+
+/* Responsive adjustments for forms */
+@media (max-width: 768px) {
+    .controls { 
+        flex-direction: column; 
+        gap: 10px; 
+        align-items: stretch; /* Make items full width */
+    }
+    .controls select, 
+    .controls button, 
+    button, 
+    .button { 
+        width: 100%; /* Full width on small screens */
+    }
+}

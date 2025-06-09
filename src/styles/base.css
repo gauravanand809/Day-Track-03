@@ -1,0 +1,85 @@
+/* General Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex; /* For overall app layout with sidebar */
+    height: 100vh;
+    overflow: hidden; /* Prevent body scroll; individual areas will scroll */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.app-wrapper { /* Wraps sidebar and content-area */
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#content-area { /* Main content area beside sidebar */
+    flex-grow: 1;
+    padding: 25px;
+    overflow-y: auto; /* Allow vertical scroll for content */
+    height: 100vh; 
+    background-color: var(--bg-color); 
+}
+
+/* View Styling */
+.view {
+    display: none; /* Views are hidden by default, shown by JS */
+}
+.view.active-view {
+    display: block; /* Active view is made visible */
+}
+/* If a specific view needs to be a flex container, its component CSS should handle that */
+/* e.g., #dream-chat-view.active-view { display: flex; flex-direction: column; } */
+
+.view-header { /* Common styling for headers within each view */
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+.view-header h1, 
+.view-header h2 {
+    font-size: 1.8em;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.view-header p { /* Sub-text or description in view headers */
+    font-size: 0.95em;
+    color: var(--text-color-secondary);
+}
+
+/* General Link Styles (can also be in utilities.css if preferred) */
+a {
+    color: var(--link-color, var(--primary-accent-color)); /* Theme variable with fallback */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color, var(--primary-accent-hover-color)); /* Theme variable */
+}
+
+/* Responsive adjustments for general layout */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Stack sidebar and content on small screens */
+        overflow: auto; /* Allow body scroll on small screens */
+    }
+    #content-area {
+        height: auto; /* Auto height for content on small screens */
+        padding: 15px;
+    }
+    .view-header h1, 
+    .view-header h2 { 
+        font-size: 1.6em; 
+    }
+}

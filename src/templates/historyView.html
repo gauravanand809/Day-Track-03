@@ -1,0 +1,27 @@
+<!-- History View -->
+<div id="history-view" class="view">
+    <header class="view-header">
+        <h2>Past To-Do Lists</h2>
+    </header>
+    <div class="history-controls">
+        <input type="text" id="history-search" placeholder="Search history by topic, notes, or content...">
+        <button id="clear-history-btn" class="btn-danger">Clear All History</button>
+    </div>
+    <div id="history-list-container">
+        <!-- List of historical to-dos will appear here -->
+    </div>
+    <div id="history-detail-container" style="display:none;">
+        <button id="back-to-history-list-btn">&larr; Back to List</button>
+        <h3 id="history-detail-topic"></h3>
+        <p id="history-detail-date"></p>
+        <div id="history-detail-content" class="markdown-content">
+            <!-- Detailed content of a history item (parsed Markdown) -->
+        </div>
+        <h4>Notes:</h4>
+        <textarea id="history-detail-notes" placeholder="Add your notes for this to-do list..."></textarea>
+        <div class="history-detail-actions">
+            <button id="save-history-note-btn">Save Note</button>
+            <button id="delete-history-entry-btn" class="btn-danger">Delete This Entry</button>
+        </div>
+    </div>
+</div>

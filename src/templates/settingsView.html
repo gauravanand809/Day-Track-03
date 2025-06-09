@@ -1,0 +1,87 @@
+<!-- Settings View -->
+<div id="settings-view" class="view">
+    <header class="view-header">
+        <h2>Settings</h2>
+    </header>
+    <div class="settings-form-container">
+        <div class="setting-item">
+            <label for="ai-provider-select">AI Provider:</label>
+            <select id="ai-provider-select">
+                <option value="gemini" selected>Google Gemini</option>
+                <option value="openai">OpenAI-compatible API</option>
+            </select>
+            <p class="setting-description">Choose your preferred AI service provider.</p>
+        </div>
+
+        <!-- Gemini settings, no longer in a separate bordered group -->
+        <div id="gemini-settings-group" style="margin-top: 20px;"> 
+            <h4>Google Gemini Settings</h4>
+            <div class="setting-item">
+                <label for="gemini-api-key-input">Gemini API Key:</label>
+                <input type="password" id="gemini-api-key-input" placeholder="Enter your Gemini API Key">
+                <p class="setting-description">Your API key is stored locally and never shared.</p>
+            </div>
+            <div class="setting-item">
+                <label for="gemini-ai-model-select">Gemini AI Model:</label>
+                <select id="gemini-ai-model-select">
+                    <option value="gemini-2.5-pro-preview-06-05">Gemini 2.5 Pro (Default)</option>
+                    <option value="gemini-1.5-flash-latest">Gemini 1.5 Flash</option>
+                    <option value="other">Other (Specify below)</option>
+                </select>
+                <input type="text" id="gemini-ai-model-other-input" placeholder="Enter custom Gemini model name" style="display:none; margin-top: 5px;">
+                <p class="setting-description">Select a Gemini model or specify another. Ensure your API key has access.</p>
+            </div>
+        </div>
+
+        <div class="setting-item">
+            <label for="theme-select">App Theme:</label>
+            <select id="theme-select">
+                <option value="default">Default (Red)</option>
+                <option value="ocean-blue">Ocean Blue</option>
+                <option value="forest-green">Forest Green</option>
+                <option value="graphite-gray">Graphite Gray</option>
+                <option value="sunset-orange">Sunset Orange</option>
+                <option value="royal-purple">Royal Purple</option>
+                <option value="teal-aqua">Teal Aqua</option>
+                <option value="ruby-red">Ruby Red</option>
+                <option value="goldenrod-yellow">Goldenrod Yellow</option>
+                <option value="magenta-rose">Magenta Rose</option>
+                <option value="solarized">Solarized</option>
+                <option value="nord">Nord</option>
+                <option value="dracula">Dracula</option>
+                <option value="monokai">Monokai</option>
+                <option value="gruvbox">Gruvbox</option>
+                <option value="tomorrow-night-blue">Tomorrow Night Blue</option>
+                <option value="one-dark-pro">One Dark Pro</option>
+                <option value="material-palenight">Material Palenight</option>
+                <option value="github">GitHub</option>
+            </select>
+            <p class="setting-description">Choose your preferred application theme.</p>
+        </div>
+
+        <!-- OpenAI settings, no longer in a separate bordered group -->
+        <div id="openai-settings-group" style="display:none; margin-top: 20px;">
+            <h4>OpenAI-compatible API Settings</h4>
+            <div class="setting-item">
+                <label for="openai-select-endpoint">Select Saved Endpoint Configuration:</label>
+                <select id="openai-select-endpoint">
+                    <option value="">-- Select a Configuration --</option>
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+                <p class="setting-description">Manage these in the "AI Configurations" view. </p>
+            </div>
+            <div class="setting-item" id="openai-model-selection-container" style="display:none;">
+                <label for="openai-select-model-from-endpoint">Select Model from Endpoint:</label>
+                <select id="openai-select-model-from-endpoint">
+                    <!-- Options will be populated by JavaScript based on selected endpoint -->
+                </select>
+                <p class="setting-description">This model will be used for generation.</p>
+            </div>
+            <!-- Removed the "Manage Endpoint Configurations" link -->
+        </div>
+        <!-- Save button now in its own container for styling -->
+        <div class="save-settings-container">
+            <button id="save-settings-btn">Save Settings</button>
+        </div>
+    </div>
+</div>

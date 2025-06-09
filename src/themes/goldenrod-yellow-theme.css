@@ -1,0 +1,34 @@
+/* themes/goldenrod-yellow-theme.css */
+body.theme-goldenrod-yellow {
+    --primary-accent-light: #FFC107; /* Bootstrap warning yellow */
+    --button-bg-light: #FFC107;
+    --button-text-light: #000000; /* Black text for yellow button */
+    --button-hover-bg-light: #E0A800; /* Darker yellow */
+    --sidebar-active-text-light: #E0A800; /* Darker yellow for text */
+    --loader-color-light: #FFC107;
+    --link-color-light: #E0A800;
+
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+}
+
+body.theme-goldenrod-yellow.dark-mode {
+    --primary-accent-dark: #FCD34D; /* Softer yellow for dark mode */
+    --button-bg-dark: #FCD34D;
+    --button-text-dark: #000000; /* Black text for yellow button */
+    --button-hover-bg-dark: #FDBA74; /* Lighter, softer orange-yellow for hover */
+    --sidebar-active-text-dark: #FCD34D;
+    --loader-color-dark: #FCD34D;
+    --link-color-dark: #FCD34D;
+
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+}

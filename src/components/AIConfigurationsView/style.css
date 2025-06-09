@@ -1,0 +1,193 @@
+/* Styles specific to the AIConfigurationsView component */
+
+#ai-configurations-view .view-header {
+    margin-bottom: 15px;
+}
+
+#add-new-endpoint-btn {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.configurations-list-container h3 {
+    font-size: 1.3em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#saved-ai-endpoints-list p {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-color-secondary);
+    font-style: italic;
+}
+
+.configurations-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.configuration-item {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+body.dark-mode .configuration-item {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.configuration-item .config-name {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--primary-accent-color);
+}
+
+.configuration-item .config-models {
+    font-size: 0.9em;
+    color: var(--text-color-secondary);
+    word-break: break-all; 
+    margin-top: 5px; 
+}
+
+.configuration-item .config-models-display {
+    font-size: 0.9em;
+    color: var(--text-color-secondary); 
+    word-break: break-all;
+    margin-top: 5px;
+    line-height: 1.4; 
+    background-color: transparent;
+    padding: 0;
+}
+
+.configuration-item .config-url code,
+.configuration-item .config-models code {
+    background-color: var(--sidebar-hover-bg);
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+.configuration-item .config-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.configuration-item .config-actions button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+.btn-secondary {
+    background-color: var(--input-border-color); 
+    color: var(--text-color);
+    border-color: var(--input-border-color);
+}
+.btn-secondary:hover {
+    background-color: var(--border-color);
+}
+
+/* AI Endpoint Configuration Modal */
+#endpoint-config-modal .modal-content {
+    max-width: 650px; 
+    padding: 18px 22px; /* Further reduced padding for compactness */
+}
+#endpoint-config-modal h3 { /* #endpoint-modal-title */
+    margin-bottom: 12px; /* Compacted */
+    padding-bottom: 8px; /* Compacted */
+    font-size: 1.2em; /* Compacted */
+}
+
+#endpoint-config-modal .setting-item {
+    margin-bottom: 8px; /* Compacted */
+}
+#endpoint-config-modal .setting-item label {
+    font-weight: 500; 
+    margin-bottom: 2px; /* Compacted */
+    font-size: 0.75em; /* Compacted */
+}
+#endpoint-config-modal .setting-item input[type="text"],
+#endpoint-config-modal .setting-item input[type="password"] {
+    font-size: 0.9em; 
+    padding: 8px 10px; /* Slightly less padding for inputs in modal */
+}
+#endpoint-config-modal .setting-description {
+    font-size: 0.7em; /* Even smaller description */
+    margin-top: 2px; /* Tighter to input */
+}
+
+#endpoint-models-container { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Compacted gap */
+    padding: 6px; /* Compacted padding */
+    border: 1px solid var(--input-border-color);
+    border-radius: 6px;
+    background-color: var(--input-bg-color);
+    min-height: 36px; 
+    margin-bottom: 4px; /* Compacted */
+}
+
+.model-tag-editable {
+    background-color: var(--tag-bg-color); 
+    color: var(--tag-text-color); 
+    padding: 5px 10px;          
+    border-radius: 14px;        
+    font-size: 0.85em;          
+    display: inline-flex; 
+    align-items: center;
+    line-height: 1.2; 
+    margin: 2px; 
+    box-shadow: 0 1px 1px rgba(0,0,0,0.08);
+    gap: 5px; 
+}
+
+.remove-model-tag-btn {
+    background: none;
+    border: none;
+    color: inherit; 
+    opacity: 0.6;
+    cursor: pointer;
+    padding: 0 2px; 
+    font-size: 1.2em; 
+    line-height: 1;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+}
+.remove-model-tag-btn:hover {
+    opacity: 1;
+}
+
+.model-input-group {
+    display: flex;
+    gap: 6px; /* Compacted */
+    margin-top: 4px; /* Compacted */
+}
+#new-model-name-input {
+    flex-grow: 1; 
+    font-size: 0.9em; 
+    padding: 8px 10px; /* Consistent with other inputs */
+}
+#add-model-to-endpoint-btn {
+    flex-shrink: 0; 
+    padding: 8px 10px; /* Compacted */
+    font-size: 0.85em; /* Compacted */
+}
+
+#endpoint-config-modal .modal-actions {
+    margin-top: 12px; /* Compacted */
+    padding-top: 8px; /* Compacted */
+    justify-content: flex-end; 
+}
+#save-endpoint-config-btn {
+    padding: 8px 15px; /* Compacted */
+    font-size: 0.9em;
+}

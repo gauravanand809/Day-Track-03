@@ -1,0 +1,66 @@
+/* themes/theme-monokai.css - Regenerated for distinctness */
+body.theme-monokai {
+    /* Monokai Light Values (Interpretation) */
+    --primary-accent-light: #AE81FF; /* Purple */
+    --button-bg-light: #F92672; /* Pink */
+    --button-hover-bg-light: #FD5FF1; /* Lighter Pink */
+    --sidebar-active-text-light: #A6E22E; /* Green */
+    --loader-color-light: #F92672; /* Pink */
+    --link-color-light: #66D9EF; /* Blue */
+
+    /* General variables - default to light mode values */
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+
+    /* Overriding base colors for Monokai Light (Interpretation) */
+    --bg-color: #FDF9F3; /* Very light, almost white */
+    --text-color: #3E3D32; /* Dark grey, Monokai's comment color */
+    --text-color-secondary: #75715E; /* Monokai comment for secondary */
+    --sidebar-bg: #F2F0EA; /* Slightly off-white */
+    --sidebar-text: #3E3D32;
+    --sidebar-active-bg: #E6E0D2; /* Light beige */
+    --sidebar-hover-bg: #E6E0D2;
+    --border-color: #C4C0B7; /* Muted border */
+    --input-bg-color: #F2F0EA;
+    --input-border-color: #C4C0B7;
+    --input-text-color: #3E3D32;
+    --card-bg-color: #F2F0EA;
+    --button-text-color: #FFFFFF; /* White text for pink buttons */
+}
+
+body.theme-monokai.dark-mode {
+    /* Monokai Dark Values (Classic Monokai Pro Palette) */
+    --primary-accent-dark: #AE81FF; /* Purple */
+    --button-bg-dark: #F92672; /* Pink */
+    --button-hover-bg-dark: #FD5FF1; /* Lighter Pink */
+    --sidebar-active-text-dark: #A6E22E; /* Green */
+    --loader-color-dark: #F92672; /* Pink */
+    --link-color-dark: #66D9EF; /* Blue */
+
+    /* Override general variables for dark mode */
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+
+    /* Overriding base colors for Monokai Dark */
+    --bg-color: #272822; /* Background */
+    --text-color: #F8F8F2; /* Foreground */
+    --text-color-secondary: #75715E; /* Comment */
+    --sidebar-bg: #1E1F1A; /* Slightly darker background */
+    --sidebar-text: #F8F8F2;
+    --sidebar-active-bg: #3E3D32; /* Dark grey */
+    --sidebar-hover-bg: #3E3D32;
+    --border-color: #3E3D32;
+    --input-bg-color: #1E1F1A;
+    --input-border-color: #75715E; /* Comment */
+    --input-text-color: #F8F8F2;
+    --card-bg-color: #1E1F1A;
+    --button-text-color: #FFFFFF; /* White text for pink buttons */
+}

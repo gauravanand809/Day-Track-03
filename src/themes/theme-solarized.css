@@ -1,0 +1,66 @@
+/* themes/theme-solarized.css - Regenerated for distinctness */
+body.theme-solarized {
+    /* Solarized Light Values */
+    --primary-accent-light: #268bd2; /* Blue */
+    --button-bg-light: #268bd2; /* Blue */
+    --button-hover-bg-light: #859900; /* Green for distinct hover */
+    --sidebar-active-text-light: #cb4b16; /* Orange */
+    --loader-color-light: #268bd2; /* Blue */
+    --link-color-light: #2aa198; /* Cyan */
+
+    /* General variables - default to light mode values */
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+
+    /* Overriding base colors for Solarized Light */
+    --bg-color: #fdf6e3; /* base3 */
+    --text-color: #657b83; /* base0 */
+    --text-color-secondary: #586e75; /* base1 */
+    --sidebar-bg: #eee8d5; /* base2 */
+    --sidebar-text: #586e75; /* base1 */
+    --sidebar-active-bg: #fdf6e3; /* base3 (to contrast with orange active text) */
+    --sidebar-hover-bg: #f5efdc; /* Slightly darker base3 */
+    --border-color: #93a1a1; /* base01 */
+    --input-bg-color: #eee8d5; /* base2 */
+    --input-border-color: #93a1a1; /* base01 */
+    --input-text-color: #657b83; /* base0 */
+    --card-bg-color: #eee8d5; /* base2 */
+    --button-text-color: #fdf6e3; /* base3 - for text on blue/green buttons */
+}
+
+body.theme-solarized.dark-mode {
+    /* Solarized Dark Values */
+    --primary-accent-dark: #268bd2; /* Blue */
+    --button-bg-dark: #268bd2; /* Blue */
+    --button-hover-bg-dark: #859900; /* Green for distinct hover */
+    --sidebar-active-text-dark: #cb4b16; /* Orange */
+    --loader-color-dark: #268bd2; /* Blue */
+    --link-color-dark: #2aa198; /* Cyan */
+
+    /* Override general variables for dark mode */
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+
+    /* Overriding base colors for Solarized Dark */
+    --bg-color: #002b36; /* base03 */
+    --text-color: #839496; /* base0 */
+    --text-color-secondary: #586e75; /* base01 */
+    --sidebar-bg: #073642; /* base02 */
+    --sidebar-text: #839496; /* base0 */
+    --sidebar-active-bg: #002b36; /* base03 (to contrast with orange active text) */
+    --sidebar-hover-bg: #0a404f; /* Slightly lighter base02 */
+    --border-color: #586e75; /* base01 */
+    --input-bg-color: #073642; /* base02 */
+    --input-border-color: #586e75; /* base01 */
+    --input-text-color: #839496; /* base0 */
+    --card-bg-color: #073642; /* base02 */
+    --button-text-color: #002b36; /* base03 - for text on blue/green buttons */
+}

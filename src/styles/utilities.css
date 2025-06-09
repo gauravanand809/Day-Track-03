@@ -1,0 +1,71 @@
+/* Utility Styles: Loader, Error Messages, etc. */
+
+/* Loader Animation */
+.loader {
+    border: 4px solid var(--bg-color); /* Track color blends with background */
+    border-top: 4px solid var(--loader-color, var(--primary-accent-color)); /* Spinner color from theme */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.8s linear infinite;
+    margin: 25px auto; /* Default centering */
+    display: none; /* Hidden by default, shown by JS */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error Message Styling (e.g., for API errors shown in containers) */
+/* This targets <p> tags with inline style "color:red", which was in the original app.js */
+/* A class-based approach would be cleaner, e.g., .error-message-box */
+p[style*="color:red"] { /* Consider replacing with a dedicated class */
+    background-color: var(--error-bg-color-light, #f8d7da); /* Fallback if theme var not set */
+    color: var(--error-text-color-light, #721c24);
+    padding: 12px 15px; /* More padding */
+    border-radius: 6px;
+    border: 1px solid var(--error-border-color-light, #f5c6cb);
+    margin: 15px 0; /* Consistent margin */
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+body.dark-mode p[style*="color:red"] {
+    background-color: var(--error-bg-color-dark, #5c2b29);
+    color: var(--error-text-color-dark, #ffcdd2);
+    border-color: var(--error-border-color-dark, #e57373);
+}
+/* It's good practice to define these color variables in variables.css or theme files */
+/* Example additions to :root in variables.css:
+    --error-bg-color-light: #f8d7da;
+    --error-text-color-light: #721c24;
+    --error-border-color-light: #f5c6cb;
+    --error-bg-color-dark: #522326; 
+    --error-text-color-dark: #f5c6cb;
+    --error-border-color-dark: #8a3037;
+*/
+
+
+/* General Responsive Adjustments (if not covered by base.css or forms.css) */
+/* This media query was in the original style.css and handled some general stacking.
+   It's included here for completeness, but specific components might have their own
+   more detailed responsive styles. */
+@media (max-width: 768px) {
+    /* .controls and body stacking are in forms.css and base.css respectively */
+    /* .modal-content adjustments are in modals.css */
+    
+    /* Any other global responsive utilities can go here */
+}
+
+/* Helper class for visually hidden elements (accessible to screen readers) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

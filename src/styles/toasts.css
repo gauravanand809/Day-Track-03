@@ -1,0 +1,83 @@
+/* Toast Notification Styles */
+#toast-container {
+    position: fixed;
+    bottom: 25px; /* Increased spacing from bottom */
+    right: 25px;  /* Increased spacing from right */
+    z-index: 2000; /* Ensure toasts are on top */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align toasts to the right */
+    gap: 12px; /* Space between multiple toasts */
+}
+
+.toast {
+    background-color: var(--card-bg-color); /* Use card background as base */
+    color: var(--text-color); /* Use default text color */
+    padding: 14px 22px; /* Slightly more padding */
+    border-radius: 8px; /* More rounded */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Softer, more modern shadow */
+    border: 1px solid var(--border-color);
+    opacity: 0;
+    transform: translateX(120%); /* Start further off-screen for a more pronounced entry */
+    transition: opacity 0.4s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                transform 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
+    font-size: 0.95em;
+    min-width: 280px; /* Minimum width for better readability */
+    max-width: 380px; /* Maximum width */
+    pointer-events: auto; /* Allow interaction if needed in future */
+}
+
+body.dark-mode .toast {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Type-specific toast styling */
+.toast.success {
+    background-color: var(--success-bg-color, #28a745); /* Use CSS var or fallback */
+    color: var(--success-text-color, white);
+    border-left: 5px solid var(--success-border-color, #1e7e34); /* Accent border */
+}
+body.dark-mode .toast.success {
+    background-color: var(--success-bg-color-dark, #218838);
+    border-left-color: var(--success-border-color-dark, #19692c);
+}
+
+.toast.error {
+    background-color: var(--error-bg-color, #dc3545);
+    color: var(--error-text-color, white);
+    border-left: 5px solid var(--error-border-color, #b02a37);
+}
+body.dark-mode .toast.error {
+    background-color: var(--error-bg-color-dark, #c82333);
+    border-left-color: var(--error-border-color-dark, #a21b29);
+}
+
+.toast.info {
+    background-color: var(--info-bg-color, #17a2b8);
+    color: var(--info-text-color, white);
+    border-left: 5px solid var(--info-border-color, #117a8b);
+}
+body.dark-mode .toast.info {
+    background-color: var(--info-bg-color-dark, #138496);
+    border-left-color: var(--info-border-color-dark, #0d6775);
+}
+
+/* It's good practice to define these color variables in variables.css or theme files */
+/* Example additions to :root in variables.css:
+    --success-bg-color: #d4edda;
+    --success-text-color: #155724;
+    --success-border-color: #155724;
+    --error-bg-color: #f8d7da;
+    --error-text-color: #721c24;
+    --error-border-color: #721c24;
+    --info-bg-color: #d1ecf1;
+    --info-text-color: #0c5460;
+    --info-border-color: #0c5460;
+   And their dark mode equivalents.
+   The current implementation uses solid colors for better contrast by default.
+*/

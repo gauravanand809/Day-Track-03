@@ -1,0 +1,33 @@
+/* themes/royal-purple-theme.css */
+body.theme-royal-purple {
+    --primary-accent-light: #6F42C1; /* Bootstrap purple */
+    --button-bg-light: #6F42C1;
+    --button-hover-bg-light: #59369A; /* Darker purple */
+    --sidebar-active-text-light: #6F42C1;
+    --loader-color-light: #6F42C1;
+    --link-color-light: #6F42C1;
+
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+}
+
+body.theme-royal-purple.dark-mode {
+    --primary-accent-dark: #A78BFA; /* Lighter, vibrant purple */
+    --button-bg-dark: #A78BFA;
+    --button-text-dark: #000000; /* Black text for light purple button */
+    --button-hover-bg-dark: #C4B5FD; /* Even lighter purple for hover */
+    --sidebar-active-text-dark: #A78BFA;
+    --loader-color-dark: #A78BFA;
+    --link-color-dark: #A78BFA;
+
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+}

@@ -1,0 +1,67 @@
+/* themes/theme-tomorrow-night-blue.css */
+body.theme-tomorrow-night-blue {
+    /* Tomorrow Night Blue is primarily a dark theme. Light mode is an interpretation. */
+    /* Light Values (Interpretation) */
+    --primary-accent-light: #7AA6DA; /* Blue */
+    --button-bg-light: #7AA6DA; /* Blue */
+    --button-hover-bg-light: #9ABEE6; /* Lighter Blue */
+    --sidebar-active-text-light: #C397D8; /* Purple */
+    --loader-color-light: #7AA6DA; /* Blue */
+    --link-color-light: #99C794; /* Green */
+
+    /* General variables - default to light mode values */
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+
+    /* Overriding base colors for Tomorrow Light (Interpretation) */
+    --bg-color: #FFFFFF; /* White */
+    --text-color: #4D4D4C; /* Dark Gray */
+    --text-color-secondary: #8E908C; /* Medium Gray */
+    --sidebar-bg: #F2F2F2; /* Light Gray */
+    --sidebar-text: #4D4D4C;
+    --sidebar-active-bg: #E6E6E6; /* Slightly darker gray */
+    --sidebar-hover-bg: #E6E6E6;
+    --border-color: #D3D3D3; /* Light border */
+    --input-bg-color: #FFFFFF;
+    --input-border-color: #D3D3D3;
+    --input-text-color: #4D4D4C;
+    --card-bg-color: #F2F2F2;
+    --button-text-color: #FFFFFF; /* White text for blue buttons */
+}
+
+body.theme-tomorrow-night-blue.dark-mode {
+    /* Tomorrow Night Blue Dark Values */
+    --primary-accent-dark: #7AA6DA; /* Blue */
+    --button-bg-dark: #7AA6DA; /* Blue */
+    --button-hover-bg-dark: #9ABEE6; /* Lighter Blue */
+    --sidebar-active-text-dark: #C397D8; /* Purple */
+    --loader-color-dark: #7AA6DA; /* Blue */
+    --link-color-dark: #99C794; /* Green */
+
+    /* Override general variables for dark mode */
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+
+    /* Overriding base colors for Tomorrow Night Blue Dark */
+    --bg-color: #002451; /* Dark Blue Background */
+    --text-color: #FFFFFF; /* White Foreground */
+    --text-color-secondary: #B0B0B0; /* Light Gray */
+    --sidebar-bg: #001C3D; /* Darker Blue Background */
+    --sidebar-text: #FFFFFF;
+    --sidebar-active-bg: #00376B; /* Medium Blue */
+    --sidebar-hover-bg: #00376B;
+    --border-color: #00376B;
+    --input-bg-color: #001C3D;
+    --input-border-color: #00376B;
+    --input-text-color: #FFFFFF;
+    --card-bg-color: #001C3D;
+    --button-text-color: #002451; /* Dark text for light blue buttons */
+}

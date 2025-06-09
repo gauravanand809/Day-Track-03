@@ -1,0 +1,54 @@
+<!-- Generator View -->
+<div id="generator-view" class="view"> <!-- Removed active-view, will be handled by JS -->
+    <header class="view-header">
+        <h1>AI Topic Deep-Dive</h1>
+        <p>Select a topic to generate a comprehensive to-do list for study and revision.</p>
+    </header>
+    <div class="controls" style="flex-direction: column; align-items: stretch;"> 
+        <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 10px;">
+            <input type="text" id="topic-other-input" placeholder="Custom topic" style="display:none; padding: 10px 15px; border-radius: 6px; border: 1px solid var(--input-border-color); font-size: 0.95em; background-color: var(--input-bg-color); color: var(--input-text-color); flex-grow: 1;">
+            <select id="topic-select" style="flex-basis: 180px; flex-shrink: 0;">
+                <option value="" disabled selected>-- Select a Topic --</option>
+                <option value="Array">Array</option>
+                <option value="String">String</option>
+                <option value="String Matching">String Matching</option>
+                <option value="Dynamic Programming">Dynamic Programming</option>
+                <option value="Math">Math</option>
+                <option value="Greedy">Greedy</option>
+                <option value="DFS+BFS+Graphs">DFS+BFS+Graphs</option>
+                <option value="Binary Search">Binary Search</option>
+                <option value="Database">Database</option>
+                <option value="Tree & Binary Tree">Tree & Binary Tree</option>
+                <option value="Binary Search Tree">Binary Search Tree</option>
+                <option value="Two Pointers">Two Pointers</option>
+                <option value="Sliding Window">Sliding Window</option>
+                <option value="Bit Manipulation">Bit Manipulation</option>
+                <option value="Bitmask">Bitmask</option>
+                <option value="Heap (Priority Queue)">Heap (Priority Queue)</option>
+                <option value="Stack & Monotonic Stack">Stack & Monotonic Stack</option>
+                <option value="Queue">Queue</option>
+                <option value="Design">Design</option>
+                <option value="Backtracking">Backtracking</option>
+                <option value="Linked List">Linked List</option>
+                <option value="Trie">Trie</option>
+                <option value="Number Theory">Number Theory</option>
+                <option value="Divide and Conquer">Divide and Conquer</option>
+                <option value="Recursion">Recursion</option>
+                <option value="Segment Tree">Segment Tree</option>
+                <option value="Binary Indexed Tree">Binary Indexed Tree</option>
+                <option value="Geometry">Geometry</option>
+                <option value="Game Theory">Game Theory</option>
+                <option value="other-topic">Other Topic</option>
+            </select>
+        </div>
+        <div class="controls-buttons" style="display: flex; gap: 12px; margin-top: 10px;">
+            <button id="pick-for-me-btn" style="flex-grow: 1;">Pick for Me</button>
+            <button id="generate-btn" style="flex-grow: 1;">Generate</button>
+        </div>
+    </div>
+    <div id="loader" class="loader" style="display:none;"></div>
+    <div id="todo-container">
+        <!-- Generated content will appear here -->
+    </div>
+    <button id="download-btn" style="display:none;">Download Todo List</button>
+</div>

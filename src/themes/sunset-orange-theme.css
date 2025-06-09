@@ -1,0 +1,33 @@
+/* themes/sunset-orange-theme.css */
+body.theme-sunset-orange {
+    --primary-accent-light: #FD7E14; /* Bootstrap orange */
+    --button-bg-light: #FD7E14;
+    --button-hover-bg-light: #E67E22; /* Darker orange */
+    --sidebar-active-text-light: #FD7E14;
+    --loader-color-light: #FD7E14;
+    --link-color-light: #FD7E14;
+
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+}
+
+body.theme-sunset-orange.dark-mode {
+    --primary-accent-dark: #FFA500; /* Standard orange, good contrast on dark */
+    --button-bg-dark: #FFA500;
+    --button-text-dark: #000000; /* Black text for orange button */
+    --button-hover-bg-dark: #FFB733; /* Lighter orange for hover */
+    --sidebar-active-text-dark: #FFA500;
+    --loader-color-dark: #FFA500;
+    --link-color-dark: #FFA500;
+
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+}

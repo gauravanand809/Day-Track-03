@@ -1,0 +1,34 @@
+/* themes/ocean-blue-theme.css */
+body.theme-ocean-blue {
+    --primary-accent-light: #007AFF;
+    --button-bg-light: #007AFF;
+    --button-hover-bg-light: #0056b3; /* Darker blue for hover */
+    --sidebar-active-text-light: #007AFF;
+    --loader-color-light: #007AFF;
+    --link-color-light: #007AFF;
+
+    /* General variables that will be overridden by dark mode specific theme variables if dark mode is active */
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+}
+
+body.theme-ocean-blue.dark-mode {
+    --primary-accent-dark: #58A6FF; /* Lighter blue for dark mode */
+    --button-bg-dark: #58A6FF;
+    --button-hover-bg-dark: #80bfff; /* Even lighter blue for hover in dark mode */
+    --sidebar-active-text-dark: #58A6FF;
+    --loader-color-dark: #58A6FF;
+    --link-color-dark: #58A6FF;
+
+    /* Override general variables for dark mode */
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+}

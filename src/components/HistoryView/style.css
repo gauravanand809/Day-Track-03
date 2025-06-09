@@ -1,0 +1,159 @@
+/* Styles specific to the HistoryView component */
+
+#history-view .history-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 1.2rem; /* Matches original style.css */
+    width: 100%;
+}
+
+#history-search { /* Input field for searching history */
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 6px;
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    font-size: 0.95em;
+    min-width: 200px;
+}
+
+#clear-history-btn { /* Button to clear all history */
+    flex-shrink: 0;
+    /* padding: 10px 15px; */ /* Handled by global button styles or .btn-danger */
+    /* font-size: 0.95em; */ /* Handled by global button styles */
+    white-space: nowrap;
+    margin-left: 15px; /* Explicit margin from original style.css */
+    /* Colors and specific button styles come from .btn-danger and global button styles */
+}
+
+#history-list-container {
+    /* max-height: calc(100vh - 250px); */ /* Consider making this more dynamic or a CSS var */
+    /* A more robust approach might be to use flexbox for the view layout */
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 8px; /* Padding for inside the scrollable area */
+    background-color: var(--card-bg-color); /* Give it a card-like background */
+}
+
+.history-items-list { /* UL element */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history-item { /* LI element */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.history-item:last-child {
+    border-bottom: none;
+}
+.history-item:hover {
+    background-color: var(--sidebar-hover-bg); /* Consistent hover */
+}
+
+.history-item-topic {
+    font-weight: 600;
+    color: var(--primary-accent-color); /* Use theme's primary accent */
+    font-size: 1em;
+    flex: 2; /* Give more space to topic */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+.history-item-date {
+    font-size: 0.8em;
+    color: var(--text-color-secondary);
+    text-align: center;
+    min-width: 140px; /* Adjusted min-width */
+    flex-shrink: 0;
+    flex-basis: 140px; /* Fixed basis for date */
+}
+
+.history-item-model {
+    flex: 1; /* Allow model to take remaining space */
+    font-size: 0.85em;
+    color: var(--text-color-secondary);
+    text-align: right;
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* History Detail View Specifics */
+#history-detail-container {
+    /* display:none; */ /* Controlled by JS */
+    margin-top: 15px; /* Space above detail view if it follows list controls */
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--card-bg-color);
+}
+
+#back-to-history-list-btn {
+    margin-bottom: 15px;
+    /* General button styles apply */
+}
+
+#history-detail-topic { /* h3 element */
+    font-size: 1.4em;
+    margin-bottom: 3px;
+    color: var(--text-color);
+}
+
+#history-detail-date { /* p element */
+    font-size: 0.85em;
+    color: var(--text-color-secondary);
+    margin-bottom: 12px;
+}
+
+#history-detail-content { /* div for markdown content */
+    margin-top: 10px; /* Space above content if needed */
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--input-bg-color); /* Slightly different bg for content area */
+    min-height: 60px;
+    /* Table styles within are global */
+}
+
+#history-detail-container h4 { /* "Notes:" heading */
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+#history-detail-notes { /* textarea */
+    width: 100%;
+    min-height: 70px;
+    padding: 8px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 6px;
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    font-family: var(--font-family-main);
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    resize: vertical;
+}
+
+.history-detail-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; /* Align buttons to the start */
+}
+/* #save-history-note-btn and #delete-history-entry-btn use global button styles */
+/* .btn-danger for delete button is global */

@@ -1,0 +1,33 @@
+/* themes/ruby-red-theme.css */
+body.theme-ruby-red {
+    --primary-accent-light: #DC3545; /* Bootstrap danger red */
+    --button-bg-light: #DC3545;
+    --button-hover-bg-light: #C82333; /* Darker red */
+    --sidebar-active-text-light: #DC3545;
+    --loader-color-light: #DC3545;
+    --link-color-light: #DC3545;
+
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+}
+
+body.theme-ruby-red.dark-mode {
+    --primary-accent-dark: #F87171; /* Lighter, softer red for dark mode */
+    --button-bg-dark: #F87171;
+    --button-text-dark: #000000; /* Black text for light red button */
+    --button-hover-bg-dark: #F98A8A; /* Even lighter red for hover */
+    --sidebar-active-text-dark: #F87171;
+    --loader-color-dark: #F87171;
+    --link-color-dark: #F87171;
+
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+}

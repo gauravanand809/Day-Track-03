@@ -1,0 +1,66 @@
+/* themes/theme-dracula.css - Regenerated for distinctness */
+body.theme-dracula {
+    /* Dracula Light Values (Interpretation) */
+    --primary-accent-light: #6272A4; /* Comment color as a softer primary */
+    --button-bg-light: #BD93F9; /* Purple */
+    --button-hover-bg-light: #CAA6FA; /* Lighter Purple */
+    --sidebar-active-text-light: #FF79C6; /* Pink */
+    --loader-color-light: #BD93F9; /* Purple */
+    --link-color-light: #8BE9FD; /* Cyan */
+
+    /* General variables - default to light mode values */
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+
+    /* Overriding base colors for Dracula Light (Interpretation) */
+    --bg-color: #F8F8F2; /* Background (Dracula's foreground) */
+    --text-color: #282A36; /* Text (Dracula's background) */
+    --text-color-secondary: #44475A; /* Current Line (Dracula) */
+    --sidebar-bg: #F1EFF8; /* Lighter Background */
+    --sidebar-text: #44475A;
+    --sidebar-active-bg: #E0D8F0; /* Light purple */
+    --sidebar-hover-bg: #E0D8F0;
+    --border-color: #BD93F9; /* Purple border */
+    --input-bg-color: #F1EFF8;
+    --input-border-color: #BD93F9;
+    --input-text-color: #282A36;
+    --card-bg-color: #F1EFF8;
+    --button-text-color: #F8F8F2; /* Light text for purple buttons */
+}
+
+body.theme-dracula.dark-mode {
+    /* Dracula Dark Values (Official Dracula Palette) */
+    --primary-accent-dark: #BD93F9; /* Purple */
+    --button-bg-dark: #BD93F9; /* Purple */
+    --button-hover-bg-dark: #FF79C6; /* Pink for hover */
+    --sidebar-active-text-dark: #50FA7B; /* Green */
+    --loader-color-dark: #FF79C6; /* Pink */
+    --link-color-dark: #8BE9FD; /* Cyan */
+
+    /* Override general variables for dark mode */
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+
+    /* Overriding base colors for Dracula Dark */
+    --bg-color: #282A36; /* Background */
+    --text-color: #F8F8F2; /* Foreground */
+    --text-color-secondary: #6272A4; /* Comment */
+    --sidebar-bg: #21222C; /* Slightly darker background */
+    --sidebar-text: #F8F8F2;
+    --sidebar-active-bg: #44475A; /* Current Line */
+    --sidebar-hover-bg: #44475A;
+    --border-color: #44475A; /* Current Line */
+    --input-bg-color: #21222C;
+    --input-border-color: #6272A4; /* Comment */
+    --input-text-color: #F8F8F2;
+    --card-bg-color: #21222C;
+    --button-text-color: #282A36; /* Dark text for purple/pink buttons */
+}

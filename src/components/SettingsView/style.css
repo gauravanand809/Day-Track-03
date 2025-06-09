@@ -1,0 +1,111 @@
+/* Styles specific to the SettingsView component */
+
+#settings-view .view-header {
+    /* Standard view header styles apply */
+    margin-bottom: 20px;
+}
+
+.settings-form-container {
+    max-width: 700px; 
+    margin: 0 auto; 
+    padding: 0; /* No padding on the main container */
+    /* Removed background, border, and border-radius to make it transparent */
+}
+
+/* Common style for top-level setting items and the group divs */
+.settings-form-container > .setting-item,
+.settings-form-container > #gemini-settings-group,
+.settings-form-container > #openai-settings-group {
+    padding: 20px; /* Padding for content inside */
+    margin-bottom: 0; /* Remove individual bottom margins */
+    border-bottom: 1px solid var(--border-color); /* Separator line */
+    background-color: var(--card-bg-color); /* Each section gets card background */
+    border-left: 1px solid var(--border-color); /* Card-like border */
+    border-right: 1px solid var(--border-color); /* Card-like border */
+}
+/* First item gets top border and radius */
+.settings-form-container > div:first-child {
+    border-top: 1px solid var(--border-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+/* Last item before save button gets bottom radius, but save button will have its own container */
+/* We need to ensure the save button is outside this structure or the last item gets radius */
+
+
+/* Headings within the Gemini/OpenAI groups */
+#gemini-settings-group h4, 
+#openai-settings-group h4 {
+    font-size: 1.1em;
+    color: var(--text-color); 
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--border-color); /* Dashed line for sub-group title */
+}
+
+/* Items within the Gemini/OpenAI groups */
+#gemini-settings-group .setting-item, 
+#openai-settings-group .setting-item {
+    padding: 0 0 15px 0; /* Bottom padding for spacing, no horizontal/top */
+    border-bottom: none; /* No individual borders for sub-items */
+    margin-bottom: 0; 
+    background-color: transparent; /* Sub-items don't need card bg */
+    border-left: none;
+    border-right: none;
+}
+#gemini-settings-group .setting-item:last-child,
+#openai-settings-group .setting-item:last-child {
+    padding-bottom: 0; 
+}
+
+
+.setting-item label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+.setting-item input[type="password"],
+.setting-item input[type="text"],
+.setting-item select {
+    width: 100%;
+    margin-top: 4px; 
+}
+
+.setting-description {
+    font-size: 0.85em;
+    color: var(--text-color-secondary);
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+#gemini-ai-model-other-input { 
+    margin-top: 8px; 
+}
+
+#openai-model-selection-container {
+    margin-top: 10px; 
+}
+
+/* Container for the save button to give it a card-like bottom */
+.save-settings-container {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-top: none; /* Connects to the border of the last setting item */
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto; /* Center it */
+}
+
+#save-settings-btn {
+    /* margin: 20px; */ /* Margin handled by container now */
+    padding: 12px 20px; 
+    font-size: 1em;
+    display: block; 
+    width: 100%; 
+}

@@ -1,0 +1,66 @@
+/* themes/theme-github.css */
+body.theme-github {
+    /* GitHub Light Values */
+    --primary-accent-light: #0366d6; /* GitHub Blue */
+    --button-bg-light: #2ea44f; /* GitHub Green */
+    --button-hover-bg-light: #2c974b; /* Darker GitHub Green */
+    --sidebar-active-text-light: #0366d6; /* GitHub Blue */
+    --loader-color-light: #0366d6; /* GitHub Blue */
+    --link-color-light: #0366d6; /* GitHub Blue */
+
+    /* General variables - default to light mode values */
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+
+    /* Overriding base colors for GitHub Light */
+    --bg-color: #ffffff; /* White */
+    --text-color: #24292e; /* Dark Gray */
+    --text-color-secondary: #586069; /* Medium Gray */
+    --sidebar-bg: #f6f8fa; /* Light Gray */
+    --sidebar-text: #24292e;
+    --sidebar-active-bg: #e1e4e8; /* Lighter Gray Border */
+    --sidebar-hover-bg: #f3f4f6; /* Slightly darker than sidebar-bg */
+    --border-color: #e1e4e8; /* Light Gray Border */
+    --input-bg-color: #ffffff;
+    --input-border-color: #d1d5da; /* Gray Border */
+    --input-text-color: #24292e;
+    --card-bg-color: #f6f8fa;
+    --button-text-color: #ffffff; /* White text for green buttons */
+}
+
+body.theme-github.dark-mode {
+    /* GitHub Dark Values */
+    --primary-accent-dark: #58a6ff; /* GitHub Blue (Dark) */
+    --button-bg-dark: #3fb950; /* GitHub Green (Dark) */
+    --button-hover-bg-dark: #2da44e; /* Darker GitHub Green (Dark) */
+    --sidebar-active-text-dark: #58a6ff; /* GitHub Blue (Dark) */
+    --loader-color-dark: #58a6ff; /* GitHub Blue (Dark) */
+    --link-color-dark: #58a6ff; /* GitHub Blue (Dark) */
+
+    /* Override general variables for dark mode */
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+
+    /* Overriding base colors for GitHub Dark */
+    --bg-color: #0d1117; /* Dark Background */
+    --text-color: #c9d1d9; /* Light Foreground */
+    --text-color-secondary: #8b949e; /* Medium Gray Foreground */
+    --sidebar-bg: #161b22; /* Darker Background */
+    --sidebar-text: #c9d1d9;
+    --sidebar-active-bg: #21262d; /* Dark Border Color */
+    --sidebar-hover-bg: #1f242c; /* Slightly lighter than sidebar-bg */
+    --border-color: #30363d; /* Medium Dark Border */
+    --input-bg-color: #0d1117;
+    --input-border-color: #30363d;
+    --input-text-color: #c9d1d9;
+    --card-bg-color: #161b22;
+    --button-text-color: #ffffff; /* White text for green buttons */
+}

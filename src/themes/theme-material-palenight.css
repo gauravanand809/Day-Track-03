@@ -1,0 +1,67 @@
+/* themes/theme-material-palenight.css */
+body.theme-material-palenight {
+    /* Material Palenight is primarily a dark theme. Light mode is an interpretation. */
+    /* Light Values (Interpretation) */
+    --primary-accent-light: #80CBC4; /* Teal */
+    --button-bg-light: #80CBC4; /* Teal */
+    --button-hover-bg-light: #A7FFEB; /* Lighter Teal */
+    --sidebar-active-text-light: #C5E1A5; /* Light Green */
+    --loader-color-light: #80CBC4; /* Teal */
+    --link-color-light: #9575CD; /* Deep Purple */
+
+    /* General variables - default to light mode values */
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+
+    /* Overriding base colors for Material Palenight Light (Interpretation) */
+    --bg-color: #ECEFF1; /* Blue Grey 50 */
+    --text-color: #263238; /* Blue Grey 900 */
+    --text-color-secondary: #546E7A; /* Blue Grey 600 */
+    --sidebar-bg: #CFD8DC; /* Blue Grey 100 */
+    --sidebar-text: #37474F; /* Blue Grey 800 */
+    --sidebar-active-bg: #B0BEC5; /* Blue Grey 200 */
+    --sidebar-hover-bg: #B0BEC5;
+    --border-color: #90A4AE; /* Blue Grey 300 */
+    --input-bg-color: #FFFFFF; /* White */
+    --input-border-color: #90A4AE;
+    --input-text-color: #263238;
+    --card-bg-color: #CFD8DC;
+    --button-text-color: #263238; /* Dark text for light teal buttons */
+}
+
+body.theme-material-palenight.dark-mode {
+    /* Material Palenight Dark Values */
+    --primary-accent-dark: #80CBC4; /* Teal */
+    --button-bg-dark: #80CBC4; /* Teal */
+    --button-hover-bg-dark: #A7FFEB; /* Lighter Teal */
+    --sidebar-active-text-dark: #C5E1A5; /* Light Green */
+    --loader-color-dark: #80CBC4; /* Teal */
+    --link-color-dark: #9575CD; /* Deep Purple */
+
+    /* Override general variables for dark mode */
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+
+    /* Overriding base colors for Material Palenight Dark */
+    --bg-color: #292D3E; /* Background */
+    --text-color: #A6ACCD; /* Foreground */
+    --text-color-secondary: #676E95; /* Comments/Secondary */
+    --sidebar-bg: #202331; /* Darker Background */
+    --sidebar-text: #A6ACCD;
+    --sidebar-active-bg: #3A3F58; /* Active/Hover */
+    --sidebar-hover-bg: #3A3F58;
+    --border-color: #3A3F58;
+    --input-bg-color: #202331;
+    --input-border-color: #676E95;
+    --input-text-color: #A6ACCD;
+    --card-bg-color: #202331;
+    --button-text-color: #292D3E; /* Dark text for light teal buttons */
+}

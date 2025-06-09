@@ -1,0 +1,18 @@
+<!-- Dream Chat View -->
+<div id="dream-chat-view" class="view"> <!-- display:flex will be set by JS/CSS when active -->
+    <header id="dream-chat-header">
+        <button id="back-to-pods-btn">&larr; Back to All Dream Pods</button>
+        <div class="dream-chat-header-content">
+            <h2 id="dream-chat-goal-title">Chatting about: [Goal Title]</h2>
+            <p>Continue the conversation with your future self from 2029.</p>
+        </div>
+    </header>
+    <div id="dream-chat-messages-container" class="chat-messages-container">
+        <!-- Chat messages will be rendered here by JavaScript -->
+    </div>
+    <div id="dream-chat-typing-indicator" class="typing-indicator" style="display:none; margin-top:10px; margin-bottom: 10px; text-align: center; font-style: italic; color: var(--text-secondary);">Future Self is typing...</div>
+    <div class="chat-input-area">
+        <textarea id="dream-chat-input" placeholder="Type your message to your future self..."></textarea>
+        <button id="dream-chat-send-btn">Send</button>
+    </div>
+</div>

@@ -1,0 +1,202 @@
+/* Generic Modal Styles */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.65); 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.3s;
+}
+
+.modal[style*="display: flex"], 
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s; 
+}
+
+.modal-content {
+    background-color: var(--card-bg-color);
+    padding: 30px 35px; 
+    border-radius: 10px; 
+    width: 90%;
+    max-width: 550px; 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+    position: relative;
+    transform: translateY(-20px) scale(0.98); 
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0; 
+}
+
+.modal-content h3, 
+.modal-content .modal-title-text { 
+    font-size: 1.5em; 
+    font-weight: 600; 
+    color: var(--text-color);
+    margin-top: 0; 
+    margin-bottom: 25px; 
+    padding-bottom: 15px; 
+    border-bottom: 1px solid var(--border-color); 
+}
+
+.modal[style*="display: flex"] .modal-content,
+.modal.active .modal-content {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.close-modal-btn { 
+    position: absolute;
+    top: 15px; 
+    right: 18px;
+    font-size: 1.6em; 
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-color-secondary);
+    background: none;
+    border: none;
+    padding: 5px; 
+    line-height: 1;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.close-modal-btn:hover {
+    color: var(--text-color);
+    transform: scale(1.1);
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 15px; 
+    margin-bottom: 6px;
+    font-weight: 500; 
+    font-size: 0.9em;
+    color: var(--text-color-secondary);
+}
+.modal-content label:first-of-type {
+    margin-top: 0; 
+}
+
+.modal-content .setting-item {
+    margin-bottom: 18px; 
+}
+.modal-content .setting-item label { 
+    font-weight: 500; 
+}
+.modal-content .setting-item .setting-description { 
+    font-size: 0.8em;
+    color: var(--text-color-secondary);
+    margin-top: 5px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="password"],
+.modal-content input[type="date"],
+.modal-content input[type="email"],
+.modal-content input[type="number"],
+.modal-content select,
+.modal-content textarea {
+    width: 100%;
+    margin-bottom: 10px; 
+}
+.modal-content textarea {
+    min-height: 80px; 
+    resize: vertical;
+}
+
+.modal-content input[type="checkbox"] {
+    transform: scale(1.1); 
+    margin-right: 8px;
+    vertical-align: middle;
+    accent-color: var(--primary-accent-color);
+}
+
+.modal-actions {
+    margin-top: 25px;
+    padding-top: 20px; 
+    border-top: 1px solid var(--border-color); 
+    display: flex;
+    justify-content: flex-end; 
+    gap: 12px; 
+}
+.modal-actions button {
+    padding: 10px 18px; 
+}
+
+/* Smaller Modal Variant - More Compact */
+.modal-small .modal-content {
+    max-width: 400px; /* Further reduced max-width */
+    padding: 18px 22px; /* Further reduced padding */
+}
+.modal-small .modal-content h3,
+.modal-small .modal-content .modal-title-text {
+    font-size: 1.2em; /* Further adjusted title size */
+    margin-bottom: 12px; /* Further reduced space below title */
+    padding-bottom: 8px; 
+}
+.modal-small .modal-content .setting-item {
+    margin-bottom: 10px; /* Further tightened spacing for items */
+}
+.modal-small .modal-content .setting-item label {
+    margin-bottom: 4px; /* Tighter label spacing */
+    font-size: 0.85em; /* Slightly smaller label */
+}
+.modal-small .modal-content textarea { 
+    min-height: 50px; /* Even shorter default height for description */
+    font-size: 0.9em; /* Match other inputs if not already */
+}
+.modal-small .modal-content .modal-actions {
+    margin-top: 12px; /* Further reduced space above actions */
+    padding-top: 10px; /* Further reduced space for separator */
+}
+.modal-small .modal-actions button {
+    padding: 8px 15px; /* Slightly smaller buttons */
+    font-size: 0.9em;
+}
+
+
+/* Responsive adjustments for modals */
+@media (max-width: 768px) {
+    .modal-content { /* General responsive for all modals */
+        width: 95%;
+        padding: 20px; /* Unified padding for small screens */
+        max-height: 90vh; 
+        overflow-y: auto; 
+    }
+    .modal-content h3, 
+    .modal-content .modal-title-text {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+     .modal-content .setting-item {
+        margin-bottom: 12px;
+    }
+    .modal-content .modal-actions {
+        margin-top: 15px;
+        padding-top: 10px;
+    }
+
+    /* Specific overrides for .modal-small on small screens if needed, */
+    /* but the general .modal-content responsive rules might be sufficient. */
+    /* If .modal-small needs to be even smaller than general modals on small screens: */
+    /*
+    .modal-small .modal-content {
+        padding: 15px;
+    }
+    */
+
+    .modal-actions {
+        flex-direction: column-reverse; 
+        gap: 10px;
+    }
+    .modal-actions button {
+        width: 100%; 
+    }
+}

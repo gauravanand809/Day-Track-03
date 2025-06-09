@@ -1,0 +1,38 @@
+/* themes/default-theme.css */
+body.theme-default {
+    --primary-accent-light: #dd4b39;
+    --button-bg-light: #dd4b39;
+    --button-hover-bg-light: #c74433;
+    --sidebar-active-text-light: #dd4b39;
+    --loader-color-light: #dd4b39;
+    --link-color-light: #007bff; /* Default link color for light mode */
+    --primary-accent-rgb-light: 221, 75, 57; /* Added for focus shadow */
+
+    /* General variables that will be overridden by dark mode specific theme variables if dark mode is active */
+    --primary-accent-color: var(--primary-accent-light);
+    --primary-accent-rgb: var(--primary-accent-rgb-light); /* Added for focus shadow */
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+}
+
+body.theme-default.dark-mode {
+    --primary-accent-dark: #e57373;
+    --button-bg-dark: #e57373;
+    --button-hover-bg-dark: #ef9a9a;
+    --sidebar-active-text-dark: #e57373;
+    --loader-color-dark: #e57373;
+    --link-color-dark: #63b3ed; /* Default link color for dark mode */
+    --primary-accent-rgb-dark: 229, 115, 115; /* Added for focus shadow */
+
+    /* Override general variables for dark mode */
+    --primary-accent-color: var(--primary-accent-dark);
+    --primary-accent-rgb: var(--primary-accent-rgb-dark); /* Added for focus shadow */
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+}

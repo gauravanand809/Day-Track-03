@@ -1,0 +1,54 @@
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <h2>Day-Planner</h2>
+        <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌓</button>
+    </div>
+    <ul class="sidebar-nav">
+        <li><a href="#" id="nav-generator" class="nav-link active" data-view="generator-view">
+            <i data-lucide="layout-dashboard"></i> <span class="link-text">Generator</span>
+        </a></li>
+        <li><a href="#" id="nav-history" class="nav-link" data-view="history-view">
+            <i data-lucide="history"></i> <span class="link-text">History</span>
+        </a></li>
+        <li><a href="#" id="nav-parallel-you" class="nav-link" data-view="parallel-you-view">
+            <i data-lucide="users-round"></i> <span class="link-text">Parallel You</span>
+        </a></li>
+        <li><a href="#" id="nav-calendar" class="nav-link" data-view="calendar-view">
+            <i data-lucide="calendar-days"></i> <span class="link-text">Calendar/Plan</span>
+        </a></li>
+        <li><a href="#" id="nav-settings" class="nav-link" data-view="settings-view">
+            <i data-lucide="settings"></i> <span class="link-text">Settings</span>
+        </a></li>
+        <li><a href="#" id="nav-ai-configs" class="nav-link" data-view="ai-configurations-view">
+            <i data-lucide="cpu"></i> <span class="link-text">AI Configurations</span>
+        </a></li>
+    </ul>
+    <!-- Inline style block for sidebar nav link icons - this should ideally be in a CSS file -->
+    <!-- However, to keep the template self-contained for this example, it's here. -->
+    <!-- For production, move this to src/components/Sidebar/style.css or a global utility CSS -->
+    <style>
+        /* This style block is specific to the sidebar's internal structure */
+        /* and is included here to ensure nav links are styled correctly when loaded as a template. */
+        /* Ideally, these would be part of the main CSS linked in index.html */
+        #sidebar .sidebar-nav .nav-link { /* Scoped to #sidebar to avoid global impact */
+            display: flex;
+            align-items: center;
+            text-decoration: none; 
+            padding: 8px 12px; 
+            color: inherit; 
+        }
+        #sidebar .sidebar-nav .nav-link i[data-lucide] { /* Scoped to #sidebar */
+            margin-right: 10px; /* Increased from 8px for better spacing */
+            /* vertical-align: middle; /* Not needed with flex */
+            /* font-size: 1.2em; /* Lucide handles its own sizing better */
+            flex-shrink: 0; /* Prevent icon from shrinking */
+        }
+        /* Active link styling is better handled by the main CSS for theme consistency */
+        /* #sidebar .sidebar-nav .nav-link.active { ... } */
+    </style>
+    <div class="sidebar-footer">
+        <button id="toggle-sidebar-btn" aria-label="Toggle Sidebar">
+            <i data-lucide="chevron-left"></i>
+        </button>
+    </div>
+</nav>

@@ -1,0 +1,59 @@
+/* General Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px; /* Consistent top margin for tables */
+    margin-bottom: 15px; /* Consistent bottom margin */
+    font-size: 0.9em;
+    background-color: var(--card-bg-color); /* Default background, can be overridden */
+    border: 1px solid var(--border-color); /* Add a border around the table itself */
+    border-radius: 6px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensures border-radius clips th/td backgrounds */
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 10px 14px; /* Slightly more padding */
+    text-align: left;
+    vertical-align: top; /* Default vertical alignment */
+}
+
+th {
+    background-color: var(--sidebar-hover-bg); /* Subtle header background */
+    font-weight: 600;
+    color: var(--text-color);
+    border-bottom-width: 2px; /* Stronger bottom border for header cells */
+}
+
+/* Remove left/right borders for first/last header cells if table has rounded corners */
+table th:first-child {
+    border-left: none;
+}
+table th:last-child {
+    border-right: none;
+}
+/* Remove left/right borders for first/last body cells if table has rounded corners */
+table td:first-child {
+    border-left: none;
+}
+table td:last-child {
+    border-right: none;
+}
+/* Remove bottom border for last row cells if table has rounded corners */
+table tr:last-child td {
+    border-bottom: none;
+}
+
+
+tbody tr:hover {
+    background-color: var(--sidebar-hover-bg); /* Consistent hover for rows */
+}
+
+/* Checkboxes within table cells */
+td input[type="checkbox"] {
+    margin-right: 10px; /* More space next to checkbox */
+    cursor: pointer;
+    transform: scale(1.2);
+    vertical-align: middle; /* Better alignment with text in cell */
+    accent-color: var(--primary-accent-color); /* Style checkbox color if browser supports */
+}

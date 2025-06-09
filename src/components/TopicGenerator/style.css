@@ -1,0 +1,71 @@
+/* Styles specific to the TopicGenerator view */
+
+/* Controls within the generator view */
+/* The main .controls class is global, but we can add specifics if needed */
+/* For example, if #generator-view .controls needs unique layout */
+#generator-view .controls {
+    /* display: flex; */ /* Already in global */
+    /* gap: 12px; */ /* Already in global */
+    /* margin-bottom: 20px; */ /* Already in global */
+    /* align-items: center; */ /* Already in global */
+    /* flex-wrap: wrap; */ /* Already in global */
+}
+
+/* Styling for the container of topic-other-input and topic-select */
+#generator-view .controls > div:first-child { /* Targets the div wrapping the inputs */
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px; /* As per original inline style */
+    width: 100%; /* Ensure it takes full width to allow children to flex */
+}
+
+#topic-other-input {
+    /* display:none; */ /* Initial display handled by JS */
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid var(--input-border-color);
+    font-size: 0.95em;
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    flex-grow: 1; /* Takes available space */
+}
+
+#topic-select {
+    /* flex-grow: 1; */ /* Default, JS will adjust for 'other' topic */
+    /* flex-basis: 180px; */ /* Default, JS will adjust */
+    /* flex-shrink: 0; */ /* Default, JS will adjust */
+    /* min-width: 180px; */ /* From global select styles */
+    /* Specific width adjustments are handled by JS (handleTopicSelectChange) */
+}
+
+/* Container for Pick for Me and Generate buttons */
+#generator-view .controls-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px; /* As per original inline style */
+    width: 100%;
+}
+
+#generator-view .controls-buttons button {
+    flex-grow: 1; /* Make buttons share space equally */
+}
+
+/* Loader is styled globally */
+/* #loader { ... } */
+
+#todo-container {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--card-bg-color);
+    min-height: 80px;
+    /* Table styles within todo-container are handled globally */
+}
+
+#download-btn {
+    /* display:none; */ /* Initial display handled by JS */
+    margin-top: 15px; /* Add some space above the download button */
+    /* General button styling is applied globally */
+}

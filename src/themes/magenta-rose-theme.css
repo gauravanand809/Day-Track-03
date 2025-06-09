@@ -1,0 +1,33 @@
+/* themes/magenta-rose-theme.css */
+body.theme-magenta-rose {
+    --primary-accent-light: #D63384; /* Bootstrap pink */
+    --button-bg-light: #D63384;
+    --button-hover-bg-light: #B3276E; /* Darker pink/magenta */
+    --sidebar-active-text-light: #D63384;
+    --loader-color-light: #D63384;
+    --link-color-light: #D63384;
+
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+}
+
+body.theme-magenta-rose.dark-mode {
+    --primary-accent-dark: #F472B6; /* Lighter, softer pink */
+    --button-bg-dark: #F472B6;
+    --button-text-dark: #000000; /* Black text for light pink button */
+    --button-hover-bg-dark: #F68EC1; /* Even lighter pink for hover */
+    --sidebar-active-text-dark: #F472B6;
+    --loader-color-dark: #F472B6;
+    --link-color-dark: #F472B6;
+
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+}

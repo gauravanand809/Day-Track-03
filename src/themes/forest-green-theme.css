@@ -1,0 +1,32 @@
+/* themes/forest-green-theme.css */
+body.theme-forest-green {
+    --primary-accent-light: #28A745; /* Bootstrap success green */
+    --button-bg-light: #28A745;
+    --button-hover-bg-light: #218838; /* Darker green */
+    --sidebar-active-text-light: #28A745;
+    --loader-color-light: #28A745;
+    --link-color-light: #28A745;
+
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+}
+
+body.theme-forest-green.dark-mode {
+    --primary-accent-dark: #34D399; /* Lighter, vibrant green */
+    --button-bg-dark: #34D399;
+    --button-hover-bg-dark: #2DB884; /* Slightly darker vibrant green */
+    --sidebar-active-text-dark: #34D399;
+    --loader-color-dark: #34D399;
+    --link-color-dark: #34D399;
+
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+}

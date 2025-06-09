@@ -1,0 +1,54 @@
+<!-- AI Configurations View -->
+<div id="ai-configurations-view" class="view">
+    <header class="view-header">
+        <h2>AI Endpoint Configurations</h2>
+        <p>Manage your saved configurations for OpenAI-compatible APIs.</p>
+    </header>
+    <button id="add-new-endpoint-btn" class="btn-primary" style="margin-top: 15px; margin-bottom: 20px;">Add New Endpoint Configuration</button>
+    
+    <div class="configurations-list-container">
+        <h3>Saved Endpoint Configurations</h3>
+        <div id="saved-ai-endpoints-list">
+            <!-- Saved configurations will be listed here by JavaScript -->
+            <p>No configurations saved yet.</p> 
+        </div>
+    </div>
+
+    <!-- Modal for Adding/Editing AI Endpoint Configuration -->
+    <div id="endpoint-config-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal-btn" id="close-endpoint-modal-btn">&times;</span>
+            <h3 id="endpoint-modal-title">Add/Edit AI Endpoint</h3>
+            <input type="hidden" id="editing-endpoint-id">
+            
+            <div class="setting-item">
+                <label for="endpoint-name-input">Configuration Name:</label>
+                <input type="text" id="endpoint-name-input" placeholder="e.g., My Local Server, OpenRouter XYZ">
+            </div>
+            <div class="setting-item">
+                <label for="endpoint-base-url-input">Base URL (e.g., https://api.openai.com/v1):</label>
+                <input type="text" id="endpoint-base-url-input" placeholder="e.g., http://localhost:1234/v1">
+            </div>
+            <div class="setting-item">
+                <label for="endpoint-api-key-input">API Key (Optional):</label>
+                <input type="password" id="endpoint-api-key-input" placeholder="Leave blank if not needed by the endpoint">
+            </div>
+            
+            <div class="setting-item">
+                <label>Model Names (Available at this endpoint):</label>
+                <div id="endpoint-models-container">
+                    <!-- Dynamically added model tags will go here -->
+                </div>
+                <div class="model-input-group">
+                    <input type="text" id="new-model-name-input" placeholder="Enter model name" style="flex-grow: 1;">
+                    <button id="add-model-to-endpoint-btn" type="button" class="btn-secondary">Add</button>
+                </div>
+                <p class="setting-description">Add one or more model names available at this endpoint.</p>
+            </div>
+
+            <div class="modal-actions">
+                <button id="save-endpoint-config-btn" class="btn-primary">Save Configuration</button>
+            </div>
+        </div>
+    </div>
+</div>

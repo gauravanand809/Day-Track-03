@@ -1,0 +1,33 @@
+/* themes/graphite-gray-theme.css */
+body.theme-graphite-gray {
+    --primary-accent-light: #6C757D; /* Bootstrap secondary gray */
+    --button-bg-light: #6C757D;
+    --button-hover-bg-light: #5a6268; /* Darker gray */
+    --sidebar-active-text-light: #6C757D;
+    --loader-color-light: #6C757D;
+    --link-color-light: #6C757D;
+
+    --primary-accent-color: var(--primary-accent-light);
+    --button-bg-color: var(--button-bg-light);
+    --button-hover-bg-color: var(--button-hover-bg-light);
+    --sidebar-active-text: var(--sidebar-active-text-light);
+    --loader-color: var(--loader-color-light);
+    --link-color: var(--link-color-light);
+}
+
+body.theme-graphite-gray.dark-mode {
+    --primary-accent-dark: #ADB5BD; /* Lighter gray for dark mode */
+    --button-bg-dark: #ADB5BD;
+    --button-text-dark: #212529; /* Darker text for light gray button */
+    --button-hover-bg-dark: #9FA6AC; /* Slightly darker light gray */
+    --sidebar-active-text-dark: #ADB5BD;
+    --loader-color-dark: #ADB5BD;
+    --link-color-dark: #ADB5BD;
+
+    --primary-accent-color: var(--primary-accent-dark);
+    --button-bg-color: var(--button-bg-dark);
+    --button-hover-bg-color: var(--button-hover-bg-dark);
+    --sidebar-active-text: var(--sidebar-active-text-dark);
+    --loader-color: var(--loader-color-dark);
+    --link-color: var(--link-color-dark);
+}
